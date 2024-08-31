@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Paragraphs</title>
+    <style>
+        .hidden {
+            display: none;
+            text-align: center;
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
+            text-align: center;
+            width: 25%;
+            background: #ffffff;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.75s ease;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+        }
+
+        .btn:hover:before {
+            width: 400%;
+            height: 400%;
+            opacity: 0;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .surah-container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .surah-container p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="btn-container">
+            <button onclick="showParagraph(1)" class="btn">Arabic</button>
+            <button onclick="showParagraph(2)" class="btn">English</button>
+            <button onclick="showParagraph(3)" class="btn">Urdu</button>
+        </div>
+    </center>
+
+    <div class="surah-container">
+        <p id="Surah1" class="hidden">
+            <br>تَبَـٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ
+            <br>ٱلَّذِى خَلَقَ ٱلْمَوْتَ وَٱلْحَيَوٰةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًۭا ۚ وَهُوَ ٱلْعَزِيزُ
+            ٱلْغَفُورُ
+            <br>ٱلَّذِى خَلَقَ سَبْعَ سَمَـٰوَٰتٍۢ طِبَاقًۭا ۖ مَّا تَرَىٰ فِى خَلْقِ ٱلرَّحْمَـٰنِ مِن تَفَـٰوُتٍۢ ۖ
+            فَٱرْجِعِ ٱلْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍۢ
+            <br>ثُمَّ ٱرْجِعِ ٱلْبَصَرَ كَرَّتَيْنِ يَنقَلِبْ إِلَيْكَ ٱلْبَصَرُ خَاسِئًۭا وَهُوَ حَسِيرٌۭ
+            <br>وَلَقَدْ زَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ وَجَعَلْنَـٰهَا رُجُومًۭا لِّلشَّيَـٰطِينِ ۖ
+            وَأَعْتَدْنَا لَهُمْ عَذَابَ ٱلسَّعِيرِ
+            <br>وَلِلَّذِينَ كَفَرُوا۟ بِرَبِّهِمْ عَذَابُ جَهَنَّمَ ۖ وَبِئْسَ ٱلْمَصِيرُ
+            <br>إِذَآ أُلْقُوا۟ فِيهَا سَمِعُوا۟ لَهَا شَهِيقًۭا وَهِىَ تَفُورُ
+            <br>تَكَادُ تَمَيَّزُ مِنَ ٱلْغَيْظِ ۖ كُلَّمَآ أُلْقِىَ فِيهَا فَوْجٌۭ سَأَلَهُمْ خَزَنَتُهَآ أَلَمْ
+            يَأْتِكُمْ نَذِيرٌۭ
+            <br>قَالُوا۟ بَلَىٰ قَدْ جَآءَنَا نَذِيرٌۭ فَكَذَّبْنَا وَقُلْنَا مَا نَزَّلَ ٱللَّهُ مِن شَىْءٍ إِنْ
+            أَنتُمْ
+            إِلَّا فِى ضَلَـٰلٍۢ كَبِيرٍۢ
+            <br>وَقَالُوا۟ لَوْ كُنَّا نَسْمَعُ أَوْ نَعْقِلُ مَا كُنَّا فِىٓ أَصْحَـٰبِ ٱلسَّعِيرِ
+            <br>فَٱعْتَرَفُوا۟ بِذَنۢبِهِمْ فَسُحْقًۭا لِّأَصْحَـٰبِ ٱلسَّعِيرِ
+            <br>إِنَّ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُم بِٱلْغَيْبِ لَهُم مَّغْفِرَةٌۭ وَأَجْرٌۭ كَبِيرٌۭ
+            <br>وَأَسِرُّوا۟ قَوْلَكُمْ أَوِ ٱجْهَرُوا۟ بِهِۦٓ ۖ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ
+            <br>أَلَا يَعْلَمُ مَنْ خَلَقَ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ
+            <br>هُوَ ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ ذَلُولًۭا فَٱمْشُوا۟ فِى مَنَاكِبِهَا وَكُلُوا۟ مِن رِّزْقِهِۦ ۖ
+            وَإِلَيْهِ ٱلنُّشُورُ
+            <br>ءَأَمِنتُم مَّن فِى ٱلسَّمَآءِ أَن يَخْسِفَ بِكُمُ ٱلْأَرْضَ فَإِذَا هِىَ تَمُورُ
+            <br>أَمْ أَمِنتُم مَّن فِى ٱلسَّمَآءِ أَن يُرْسِلَ عَلَيْكُمْ حَاصِبًۭا ۖ فَسَتَعْلَمُونَ كَيْفَ نَذِيرِ
+            <br>وَلَقَدْ كَذَّبَ ٱلَّذِينَ مِن قَبْلِهِمْ فَكَيْفَ كَانَ نَكِيرِ
+            <br>أَوَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍۢ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ إِلَّا
+            ٱلرَّحْمَـٰنُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍۭ بَصِيرٌ
+            <br>أَمَّنْ هَـٰذَا ٱلَّذِى هُوَ جُندٌۭ لَّكُمْ يَنصُرُكُم مِّن دُونِ ٱلرَّحْمَـٰنِ ۚ إِنِ ٱلْكَـٰفِرُونَ
+            إِلَّا
+            فِى غُرُورٍ
+            <br>أَمَّنْ هَـٰذَا ٱلَّذِى يَرْزُقُكُمْ إِنْ أَمْسَكَ رِزْقَهُۥ ۚ بَل لَّجُّوا۟ فِى عُتُوٍّۢ وَنُفُورٍ
+            <br>أَفَمَن يَمْشِى مُكِبًّا عَلَىٰ وَجْهِهِۦٓ أَهْدَىٰٓ أَمَّن يَمْشِى سَوِيًّا عَلَىٰ صِرَٰطٍۢ
+            مُّسْتَقِيمٍۢ
+            <br>قُلْ هُوَ ٱلَّذِىٓ أَنشَأَكُمْ وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۖ قَلِيلًۭا
+            مَّا
+            تَشْكُرُونَ
+            <br>قُلْ هُوَ ٱلَّذِى ذَرَأَكُمْ فِى ٱلْأَرْضِ وَإِلَيْهِ تُحْشَرُونَ
+            <br>وَيَقُولُونَ مَتَىٰ هَـٰذَا ٱلْوَعْدُ إِن كُنتُمْ صَـٰدِقِينَ
+            <br>قُلْ إِنَّمَا ٱلْعِلْمُ عِندَ ٱللَّهِ وَإِنَّمَآ أَنَا۠ نَذِيرٌۭ مُّبِينٌۭ
+            <br>فَلَمَّا رَأَوْهُ زُلْفَةًۭ سِيٓـَٔتْ وُجُوهُ ٱلَّذِينَ كَفَرُوا۟ وَقِيلَ هَـٰذَا ٱلَّذِى كُنتُم بِهِۦ
+            تَدَّعُونَ
+            <br>قُلْ أَرَءَيْتُمْ إِنْ أَهْلَكَنِىَ ٱللَّهُ وَمَن مَّعِىَ أَوْ رَحِمَنَا فَمَن يُجِيرُ ٱلْكَـٰفِرِينَ
+            مِنْ
+            عَذَابٍ أَلِيمٍۢ
+            <br>قُلْ هُوَ ٱلرَّحْمَـٰنُ ءَامَنَّا بِهِۦ وَعَلَيْهِ تَوَكَّلْنَا ۖ فَسَتَعْلَمُونَ مَنْ هُوَ فِى
+            ضَلَـٰلٍۢ
+            مُّبِينٍۢ
+            <br>قُلْ أَرَءَيْتُمْ إِنْ أَصْبَحَ مَآؤُكُمْ غَوْرًۭا فَمَن يَأْتِيكُم بِمَآءٍۢ مَّعِينٍۭ
+
+        </p>
+        <p id="Surah2" class="hidden">
+            Blessed is the One in Whose Hands rests all authority. And He is Most Capable of everything.<br>
+            He is the One˺ Who created death and life in order to test which of you is best in deeds. And He is the<br>
+            Almighty, All-Forgiving.<br>
+            He is the One˺ Who created seven heavens, one above the other. You will never see any imperfection in
+            the<br>
+            creation of the Most Compassionate.1 So look again: do you see any flaws?<br>
+            Then look again and again—your sight will return frustrated and weary.<br>
+            And indeed, We adorned the lowest heaven with ˹stars like˺ lamps, and made them ˹as missiles˺ for
+            stoning<br>
+            ˹eavesdropping˺ devils, for whom We have also prepared the torment of the Blaze.<br>
+            Those who disbelieve in their Lord will suffer the punishment of Hell. What an evil destination!<br>
+            When they are tossed into it, they will hear its roaring as it boils over,<br>
+            almost bursting in fury. Every time a group is cast into it, its keepers will ask them, “Did a warner not
+            come
+            to you?”<br>
+            They will reply, “Yes, a warner did come to us, but we denied and said, ‘Allah has revealed nothing. You are
+            extremely astray.’”<br>
+            And they will lament, “If only we had listened and reasoned, we would not be among the residents of the
+            Blaze!”<br>
+            And so they will confess their sins. So away with the residents of the Blaze!<br>
+            Indeed, those in awe of their Lord without seeing Him1 will have forgiveness and a mighty reward.<br>
+            Whether you speak secretly or openly—He surely knows best what is ˹hidden˺ in the heart.<br>
+            How could He not know His Own creation? For He ˹alone˺ is the Most Subtle, All-Aware.<br>
+            He is the One Who smoothed out the earth for you, so move about in its regions and eat from His provisions.
+            And
+            to Him is the resurrection ˹of all˺.<br>
+            Do you feel secure that the One Who is in heaven will not cause the earth to swallow you up as it quakes
+            violently?<br>
+            Or do you feel secure that the One Who is in heaven will not unleash upon you a storm of stones. Only then
+            would
+            you know how ˹serious˺ My warning was!<br>
+            And certainly those before them denied ˹as well˺, then how severe was My response!<br>
+            Have they not seen the birds above them, spreading and folding their wings? None holds them up except the
+            Most
+            Compassionate. Indeed, He is All-Seeing of everything.<br>
+            Also, which ˹powerless˺ force will come to your help instead of the Most Compassionate? Indeed, the
+            disbelievers
+            are only ˹lost˺ in delusion.<br>
+            Or who is it that will provide for you if He withholds His provision? In fact, they persist in arrogance and
+            aversion ˹to the truth˺.<br>
+            Who is ˹rightly˺ guided: the one who crawls facedown or the one who walks upright on the Straight Path?<br>
+            Say, ˹O Prophet,˺ “He is the One Who brought you into being and gave you hearing, sight, and intellect.
+            ˹Yet˺
+            you hardly give any thanks.”<br>
+            ˹Also˺ say, “He is the One Who has dispersed you ˹all˺ over the earth, and to Him you will ˹all˺ be
+            gathered.”<br>
+            ˹Still˺ they ask ˹the believers˺, “When will this threat come to pass, if what you say is true?”<br>
+            Say, ˹O Prophet,˺ “That knowledge is with Allah alone, and I am only sent with a clear warning.”<br>
+            Then when they see the torment drawing near, the faces of the disbelievers will become gloomy, and it will
+            be
+            said ˹to them˺, “This is what you claimed would never come.”<br>
+            Say, ˹O Prophet,˺ “Consider this: whether Allah causes me and those with me to die or shows us mercy, who
+            will
+            save the disbelievers from a painful punishment?"<br>
+            Say, “He is the Most Compassionate—in Him ˹alone˺ we believe, and in Him ˹alone˺ we trust. You will soon
+            know
+            who is clearly astray.”<br>
+            Say, “Consider this: if your water were to sink ˹into the earth˺, then who ˹else˺ could bring you flowing
+            water?”<br>
+        </p>
+        <p id="Surah3" class="hidden">
+            <br>وہ (خدا) جس کے ہاتھ میں بادشاہی ہے بڑی برکت والا ہے۔ اور وہ ہر چیز پر قادر ہے
+            اسی نے موت اور زندگی کو پیدا کیا تاکہ تمہاری آزمائش کرے کہ تم میں کون اچھے عمل کرتا ہے۔ اور وہ زبردست (اور)
+            <br>بخشنے والا ہے
+            اس نے سات آسمان اوپر تلے بنائے۔ (اے دیکھنے والے) کیا تو (خدا) رحمٰن کی آفرنیش میں کچھ نقص دیکھتا ہے؟ ذرا
+            آنکھ
+            <br>اٹھا کر دیکھ بھلا تجھ کو (آسمان میں) کوئی شکاف نظر آتا ہے؟
+            <br>پھر دو بارہ (سہ بارہ) نظر کر، تو نظر (ہر بار) تیرے پاس ناکام اور تھک کر لوٹ آئے گی
+            اور ہم نے قریب کے آسمان کو (تاروں کے) چراغوں سے زینت دی۔ اور ان کو شیطان کے مارنے کا آلہ بنایا اور ان کے لئے
+            <br>دہکتی آگ کا عذاب تیار کر رکھا ہے
+            <br>اور جن لوگوں نے اپنے پروردگار سے انکار کیا ان کے لئے جہنم کا عذاب ہے۔ اور وہ برا ٹھکانہ ہے
+            <br>جب وہ اس میں ڈالے جائیں گے تو اس کا چیخنا چلانا سنیں گے اور وہ جوش مار رہی ہوگی
+            گویا مارے جوش کے پھٹ پڑے گی۔ جب اس میں ان کی کوئی جماعت ڈالی جائے گی تو دوزخ کے داروغہ ان سے پوچھیں گے کہ
+            تمہارے
+            <br>پاس کوئی ہدایت کرنے والا نہیں آیا تھا؟
+            وہ کہیں گے کیوں نہیں ضرور ہدایت کرنے والا آیا تھا لیکن ہم نے اس کو جھٹلا دیا اور کہا کہ خدا نے تو کوئی چیز
+            نازل
+            <br>ہی نہیں کی۔ تم تو بڑی غلطی میں (پڑے ہوئے) ہو
+            <br>اور کہیں گے اگر ہم سنتے یا سمجھتے ہوتے تو دوزخیوں میں نہ ہوتے
+            <br>پس وہ اپنے گناہ کا اقرار کرلیں گے۔ سو دوزخیوں کے لئے (رحمت خدا سے) دور ہی ہے
+            (اور) جو لوگ بن دیکھے اپنے پروردگار سے ڈرتے ہیں ان کے لئے بخشش اور اجر عظیم ہے
+            <br>اور تم (لوگ) بات پوشیدہ کہو یا ظاہر۔ وہ دل کے بھیدوں تک سے واقف ہے
+            بھلا جس نے پیدا کیا وہ بےخبر ہے؟ وہ تو پوشیدہ باتوں کا جاننے والا اور (ہر چیز سے) آگاہ ہے
+            وہی تو ہے جس نے تمہارے لئے زمین کو نرم کیا تو اس کی راہوں میں چلو پھرو اور خدا کا (دیا ہو) رزق کھاؤ اور تم
+            کو
+            <br>اسی کے پاس (قبروں سے) نکل کر جانا ہے
+            <br>کیا تم اس سے جو آسمان میں ہے بےخوف ہو کہ تم کو زمین میں دھنسا دے اور وہ اس وقت حرکت کرنے لگے
+            <br>کیا تم اس سے جو آسمان میں ہے نڈر ہو کہ تم پر کنکر بھری ہوا چھوڑ دے۔ سو تم عنقریب جان لو گے کہ میرا ڈرانا
+            کیسا ہے
+            <br>اور جو لوگ ان سے پہلے تھے انہوں نے بھی جھٹلایا تھا سو (دیکھ لو کہ) میرا کیسا عذاب ہوا
+            کیا انہوں نے اپنے سروں پر اڑتے ہوئے جانوروں کو نہیں دیکھا جو پروں کو پھیلائے رہتے ہیں اور ان کو سکیڑ بھی
+            لیتے
+            <br>ہیں۔ خدا کے سوا انہیں کوئی تھام نہیں سکتا۔ بےشک وہ ہر چیز کو دیکھ رہا ہے
+            <br>بھلا ایسا کون ہے جو تمہاری فوج ہو کر خدا کے سوا تمہاری مدد کرسکے۔ کافر تو دھوکے میں ہیں
+            <br>بھلا اگر وہ اپنا رزق بند کرلے تو کون ہے جو تم کو رزق دے؟ لیکن یہ سرکشی اور نفرت میں پھنسے ہوئے ہیں
+            <br>بھلا جو شخص چلتا ہوا منہ کے بل گر پڑتا ہے وہ سیدھے رستے پر ہے یا وہ جو سیدھے رستے پر برابر چل رہا ہو؟
+            <br>کہو وہ خدا ہی تو ہے جس نے تم کو پیدا کیا۔ اور تمہارے کان اور آنکھیں اور دل بنائے (مگر) تم کم احسان مانتے
+            ہو
+            <br>کہہ دو کہ وہی ہے جس نے تم کو زمین میں پھیلایا اور اسی کے روبرو تم جمع کئے جاؤ گے
+            <br>اور کافر کہتے ہیں کہ اگر تم سچے ہو تو یہ وعید کب (پورا) ہوگا؟
+            <br>کہہ دو اس کا علم خدا ہی کو ہے۔ اور میں تو کھول کھول کر ڈر سنانے دینے والا ہوں
+            سو جب وہ دیکھ لیں گے کہ وہ (وعدہ) قریب آگیا تو کافروں کے منہ برے ہوجائیں گے اور (ان سے) کہا جائے گا کہ یہ
+            وہی ہے
+            <br>جس کے تم خواستگار تھے
+            کہو کہ بھلا دیکھو تو اگر خدا مجھ کو اور میرے ساتھیوں کو ہلاک کردے یا ہم پر مہربانی کرے۔ تو کون ہے کافروں کو
+            دکھ
+            <br>دینے والے عذاب سے پناہ دے؟
+            کہہ دو کہ وہ جو (خدائے) رحمٰن (ہے) ہم اسی پر ایمان لائے اور اسی پر بھروسا رکھتے ہیں۔ تم کو جلد معلوم ہوجائے
+            گا
+            <br>کہ صریح گمراہی میں کون پڑ رہا تھا
+            کہو کہ بھلا دیکھو تو اگر تمہارا پانی (جو تم پیتے ہو اور برتے ہو) خشک ہوجائے تو (خدا کے) سوا کون ہے جو تمہارے
+            لئے
+            <br>شیریں پانی کا چشمہ بہا لائے
+        </p>
+    </div>
+
+    <script>
+        function showParagraph(num) {
+            document.getElementById("Surah1").style.display = "none";
+            document.getElementById("Surah2").style.display = "none";
+            document.getElementById("Surah3").style.display = "none";
+
+            document.getElementById("Surah" + num).style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>
